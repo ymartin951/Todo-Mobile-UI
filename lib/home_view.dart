@@ -3,6 +3,12 @@ import 'package:my_todo_app/create_todo_view.dart';
 import 'utills.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
+
+
+
+
+
+
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
 
@@ -19,7 +25,28 @@ class _HomeViewState extends State<HomeView> {
 
   final List<Map<String, dynamic>> data = [
     {
+      'title': 'What to do Today',
+      'description':
+          'I will do some exercise todo when i wake up in the morning',
+      'status': true,
+      'date_time': 'Today'
+    },
+    {
+      'title': 'What to do Today',
+      'description':
+          'I will do some exercise todo when i wake up in the morning',
+      'status': false,
+      'date_time': 'Today'
+    },
+    {
       'title': 'What is Lorem Ipsum',
+      'description':
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a gall',
+      'status': false,
+      'date_time': 'Today'
+    },
+    {
+      'title': 'What to do Today',
       'description':
           'Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a gall',
       'status': true,
@@ -33,21 +60,7 @@ class _HomeViewState extends State<HomeView> {
       'date_time': 'Today'
     },
     {
-      'title': 'What is Lorem Ipsum',
-      'description':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a gall',
-      'status': false,
-      'date_time': 'Today'
-    },
-    {
-      'title': 'What is Lorem Ipsum',
-      'description':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a gall',
-      'status': true,
-      'date_time': 'Today'
-    },
-    {
-      'title': 'What is Lorem Ipsum',
+      'title': 'What is Flutter',
       'description':
           'Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a gall',
       'status': false,
@@ -61,14 +74,7 @@ class _HomeViewState extends State<HomeView> {
       'date_time': 'Today'
     },
     {
-      'title': 'What is Lorem Ipsum',
-      'description':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a gall',
-      'status': false,
-      'date_time': 'Today'
-    },
-    {
-      'title': 'What is Lorem Ipsum',
+      'title': 'Lorem Ipsum',
       'description':
           'Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a gall',
       'status': true,
@@ -93,12 +99,12 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'My Todo',
+          'My Tasks',
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 21),
         ),
         leading: const Center(
             child: CircleAvatar(
-          backgroundImage: AssetImage('assets/logo.jpg'),
+          backgroundImage: AssetImage('assets/logo1.jpg'),
         )),
         actions: [
       PopupMenuButton<String>(
@@ -166,6 +172,8 @@ class _HomeViewState extends State<HomeView> {
               }, itemCount: _completed.length);
             });
           },
+
+
           child: Container(
             height: 56,
             color:  Colors.brown,

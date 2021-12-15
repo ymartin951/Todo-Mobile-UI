@@ -10,6 +10,6 @@ Color customColor({String? date}){
     case 'Yesterday':
       return Colors.purple;
     default:
-      return Colors.grey;
+      return Colors.redAccent;
   }
 }
